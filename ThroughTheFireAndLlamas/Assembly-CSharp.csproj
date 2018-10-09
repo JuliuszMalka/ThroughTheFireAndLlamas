@@ -53,7 +53,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Movement.cs" />
      <Compile Include="Assets\Player.cs" />
+     <Compile Include="Assets\Scripts\Armor\Armor.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\ItemManager.cs" />
+     <Compile Include="Assets\Scripts\PlayerStatistics.cs" />
+     <Compile Include="Assets\Scripts\ReflectionTest.cs" />
+     <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
+     <Compile Include="Assets\Spawner.cs" />
+     <None Include="Assets\JsonDotNet\link.xml" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Maciek/Desktop/IPS/ThroughTheFireAndLlamas/ThroughTheFireAndLlamas/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
@@ -263,6 +272,9 @@
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/Maciek/Desktop/IPS/ThroughTheFireAndLlamas/ThroughTheFireAndLlamas/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/Maciek/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>

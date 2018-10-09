@@ -1,0 +1,21 @@
+{
+  "Blunt": [
+    "Mace",
+    "Club",
+    "Battle Hammer",
+    "Staff"
+  ],
+  "Slash": [
+    "Bastard Sword",
+    "Long Sword",
+    "Battle Axe"
+  ],
+  "Thrust": [
+    "Spear",
+    "Lance",
+    "Dagger",
+    "Pickaxe",
+    "Morgenstern",
+    "Rapier"
+  ]
+}

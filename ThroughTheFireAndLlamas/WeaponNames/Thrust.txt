@@ -1,0 +1,6 @@
+Spear
+Lance
+Dagger
+Pickaxe
+Morgenstern
+Rapier
