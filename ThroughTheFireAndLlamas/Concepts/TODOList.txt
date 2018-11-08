@@ -1,0 +1,22 @@
+- Obra¿enia:
+	- pomys³ Limaka:
+	(BaseDmg + v) * Str i tak dalej Limak wie o co chodzi
+	- pomys³ Julek;
+	Weapon.Basedmg.(slash*x, blunt*y, thrust*z, fire*u, cold*v, lightning*w, Acid*h)
+	ka¿dy rodzaj obra¿eñ jest czêœci¹ Bazowych obra¿eñ i ich suma wynosi w³aœnie bazowe obra¿enia, ponadto ka¿dy rodzaj
+	pancerze posiada swoje w³asne odpornoœci reprezentowane jako mno¿niki poszczególnych elementów bazowych obra¿eñ broni
+
+- Serwer: z serwerem jest taka œmieszna rzecz, ¿e trzeba po prostu programowaæ ca³oœæ pod sieæ.
+	  Czyli obiekty, które maj¹ pojawiaæ siê u obu graczy musz¹ byæ spawn'owane przez serwer, nale¿y dawaæ obiketom
+	  NetworkIdentity itp. itd.
+- Wymyœleæ styl graficzny
+- MainMenu (przed robudowaniem menu o coœ wiêcej ni¿ podstawowe przyciski nale¿y obmysliæ koncepcjê graficzn¹ ca³ej zabawy)
+- Generacja poziomów
+- Klasa przeciwników
+- Klasy postaci? ( czy w ogóle bêd¹ i w jaki sposób bêd¹ rozwi¹zane )
+- System ekwipunku:
+	- czy dajemy du¿e okno z podzia³em na ka¿dy element ekwipunku
+	- czy mo¿e jednak coœ w rodzaju Isaac'a czyli ka¿dy element przy podniesieniu daje bonus 
+	  do statystyk i po prostu pozostaje w ekwipunku, przy czym armor/runa obronna ma tylko
+	  jeden slot tak jak np. broñ, klejnot(?), bi¿uteria itp.
+

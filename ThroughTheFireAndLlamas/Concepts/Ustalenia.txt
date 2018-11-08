@@ -1,0 +1,20 @@
+- rzut izometryczny ((isaac-like))
+- ekwipunek 3 slotowy (broñ1, broñ2, amulet/klejnot/runa):
+	- dwa tryby "przemieszczania siê po ekwipunku", mo¿na zrobiæ coœ w stylu, ¿e przy naciœniêciu odpowiedniego klawisza
+	  zmienia siê tryb, jeden tryb s³u¿y do zmiany umiejêctnoœci, drugi do zmiany broni
+- umiejêtnoœci / lvlowanie / doœwiadczenie:
+	- rozdawane za pomoc¹ trzech klawiszy:
+		- trzy œcie¿ki do wyboru szybkie menu dostêpu po lewej z np. klawiszami 'x', 'y', 'z' gdzie naciœniecie klawisza powoduje alokacjê punktu
+		  do ka¿dego wyboru krótki opis umiejêtnoœci
+	- doœwiadczenie potrzebne do poziomu w formie lilsty z wartoœciami potrzebnego doœwiadczenia dla odpowiedniego poziomu (para [poziom, doœwiadczenie])
+- sklep:
+	- dodajemy sklep(na razie)
+	- po skoñczeniu czasu gracze s¹ teleportowani do sklepu
+- klasy:
+	- startowo 3 klasy (hunter, warrrior, mage)
+	- klasy bêd¹ wp³ywaæ jedynie na startowe statystyki oraz startow¹ broñ
+- dla 2-8 graczy
+- generacja mapy:
+	- generacja macierzy z pokojami, która s³u¿y jako mapa pokoi
+	- dla ka¿dego pokoju generujemy macierz i na jej podstawie generujemy pokój(koncepcja) dodaæ multiplier okreœlaj¹cy
+	  stopieñ trudnoœci pokoju na podstawie odleg³oœci od pokoju startowego

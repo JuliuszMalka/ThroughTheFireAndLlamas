@@ -1,0 +1,6 @@
+Maæko(z Bogdañca):
+	- UI (ekwipunek)
+Julko:
+	- pogl¹dowy pokój
+Limako:
+	- przeciwnicy(klasa)
