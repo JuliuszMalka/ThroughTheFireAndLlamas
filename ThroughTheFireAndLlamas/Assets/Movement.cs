@@ -1,53 +1,61 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Movement : MonoBehaviour {
+public class Movement : NetworkBehaviour {
 
 	public float speed = 0f;
-	public Color sphereColor = Color.blue;
 	public float knockbackForce = 0f;
 	public float jumpForce = 0f;
 	public bool isGrounded = false;
-	public float clipLength = 0f;
-	public float soundTimer = 0f;
+    public GameObject BarrelPrefab;
+    public Transform BarrelSpawn;
+    public float timer = 0f;
 
 	// Use this for initialization
 	void Start () {
-		clipLength = gameObject.GetComponent<AudioSource>().clip.length;
-	}
+        speed = 10f;
+        BarrelSpawn.Rotate(new Vector3(0f, 0f, 1f) * 90f);
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		float x, z;
-		x = Input.GetAxis("Horizontal");
-		z = Input.GetAxis("Vertical");
-		transform.Translate(new Vector3(x, 0f, z) * speed * Time.deltaTime);
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-		}
-		if (Input.GetKeyDown(KeyCode.C) && soundTimer <= 0f) {
-			gameObject.GetComponent<AudioSource>().Play();
-			soundTimer = clipLength;
-		}
+        if (isLocalPlayer)
+        {
 
-		if (soundTimer > 0f) {
-			soundTimer -= Time.deltaTime;
-		}
+            if (timer > 0) timer -= Time.deltaTime;
+
+            float y, z;
+            y = Input.GetAxis("Horizontal");
+            z = Input.GetAxis("Vertical");
+
+            transform.Translate(new Vector3(0f, 0f, z) * speed * Time.deltaTime);
+            transform.Rotate(new Vector3(0f, y, 0f) * 17f * speed * Time.deltaTime);
+
+            if (Input.GetKeyDown(KeyCode.Space) && timer <= 0) CmdShoot();
+        }
 	}
 
-	// void OnCollisionEnter(Collision other) {
-	// 	if (other.gameObject.CompareTag("Enemy")) {
-	// 		Destroy(other.gameObject);
-	// 	}
-	// }
+    [Command]
+    void CmdShoot()
+    {
+        if(timer <= 0f) timer = 1.2f;
+        //Create object to shoot
+        GameObject bullet = (GameObject)Instantiate(BarrelPrefab, BarrelSpawn.position, BarrelSpawn.rotation);
 
-	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.CompareTag("Enemy")) {
-			Rigidbody temp = other.gameObject.GetComponent<Rigidbody>();
-			temp.AddForce(-Vector3.forward * knockbackForce, ForceMode.Impulse);
-			gameObject.GetComponent<AudioSource>().Play();
-			soundTimer = clipLength;
-		}
-	}
+        //Add velocity
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 30f;
+
+        //Spawning bullet on the Clients
+        NetworkServer.Spawn(bullet);
+
+        //Destruction
+        Destroy(bullet, 1.5f);
+    }
+
+    public override void OnStartLocalPlayer()
+    {
+        GetComponent<MeshRenderer>().material.color = Color.blue;
+    }
 }

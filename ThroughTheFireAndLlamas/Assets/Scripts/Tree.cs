@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Threading.Tasks;
 
 namespace huehue_uczonko
 {
@@ -137,7 +136,6 @@ namespace huehue_uczonko
         public Node<T> FindValue(T ToFind)
         {
             Node<T> temp = this.Root.FindValue(ToFind);
-            if(temp != null) Console.WriteLine($"Found Node with correct Value, i guess?");
             return temp;
         }
 
@@ -149,10 +147,6 @@ namespace huehue_uczonko
         public Node<T> FindID(int ToFind)
         {
             Node<T> temp = this.Root.FindID(ToFind);
-            if (temp != null)
-            {
-                if (!temp.CheckAlloc()) Console.WriteLine($"Found NOT allocated Node with ID {temp.GetID()}");
-            }
             return temp;
         }
 
@@ -172,9 +166,7 @@ namespace huehue_uczonko
         /// <returns></returns>
         public bool CheckAllocConnection(int FromID, int ToID)
         {
-            bool output = false;
-            if (this.Root != null) { output = this.Root.Search(FromID) & this.Root.Search(ToID); if(!output) Console.WriteLine($"Incorrect connection between {FromID} and {ToID}"); return output; }
-            
+            if (this.Root != null) { return this.Root.Search(FromID) & this.Root.Search(ToID); }
             return false;
         }
 

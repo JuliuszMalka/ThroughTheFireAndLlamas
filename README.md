@@ -1,2 +1,2 @@
 # ThroughTheFireAndLlamas
-Projekcik, szpagacik, wrotki, wól to jest projekt no i chuj
+Project of Battle Royal like game, made by Chrustowski Kamil, Gorski Jakub and Malka Juliusz, students of Lodz University of Technology.
