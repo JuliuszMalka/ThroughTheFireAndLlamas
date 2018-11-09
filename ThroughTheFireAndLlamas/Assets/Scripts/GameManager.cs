@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 	public string[] scenes = null;
 	public GameObject[] obstacles = null; //przeszkody jak np. beczki, skrzynie itp.
 	public bool gameStarted = false;
+	public GameObject[] skillEffectsPrefabs = null;
 
 	void Update() {
 		if (gameStarted && gameTimer > 0f) {
@@ -35,6 +36,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void FinalMatch() {
-
+		
 	}
 }
