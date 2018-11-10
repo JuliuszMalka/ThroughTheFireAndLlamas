@@ -30,8 +30,8 @@ public class Movement : NetworkBehaviour {
             y = Input.GetAxis("Horizontal");
             z = Input.GetAxis("Vertical");
 
-            transform.Translate(new Vector3(0f, 0f, z) * speed * Time.deltaTime);
-            transform.Rotate(new Vector3(0f, y, 0f) * 17f * speed * Time.deltaTime);
+            transform.Translate(new Vector3(y, 0f, z) * 1.5f *speed * Time.deltaTime);
+            //transform.Rotate(new Vector3(0f, y, 0f) * 17f * speed * Time.deltaTime);
 
             if (Input.GetKeyDown(KeyCode.Space) && timer <= 0) CmdShoot();
         }
@@ -45,7 +45,7 @@ public class Movement : NetworkBehaviour {
         GameObject bullet = (GameObject)Instantiate(BarrelPrefab, BarrelSpawn.position, BarrelSpawn.rotation);
 
         //Add velocity
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 30f;
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 45f;
 
         //Spawning bullet on the Clients
         NetworkServer.Spawn(bullet);

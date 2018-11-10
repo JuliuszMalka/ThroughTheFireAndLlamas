@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class _Scene_Manager : MonoBehaviour
 {
-
+    public GameObject[] PanelsList = null;
     public GameObject MainPanel;
     public GameObject HelpPanel;
     public GameObject OptionsPanel;
     public GameObject PlayNConnPanel;
+
 	// Use this for initialization
 	void Start ()
     {

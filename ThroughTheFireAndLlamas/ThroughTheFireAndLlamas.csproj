@@ -13,12 +13,14 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.1.0p5</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -85,13 +87,32 @@
     <Compile Include="Assets\Movement.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\Scripts\_Scene_Manager.cs" />
-    <Compile Include="Assets\Scripts\Armor\Armor.cs" />
+    <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\ForDebugging\Debugger.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\ItemManager.cs" />
-    <Compile Include="Assets\Scripts\PlayerStatistics.cs" />
-    <Compile Include="Assets\Scripts\ReflectionTest.cs" />
+    <Compile Include="Assets\Scripts\Items\Armor\Armor.cs" />
+    <Compile Include="Assets\Scripts\Items\Drop.cs" />
+    <Compile Include="Assets\Scripts\Items\Gold.cs" />
+    <Compile Include="Assets\Scripts\Items\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Items\InventorySlot.cs" />
+    <Compile Include="Assets\Scripts\Items\Item.cs" />
+    <Compile Include="Assets\Scripts\Items\ItemManager.cs" />
+    <Compile Include="Assets\Scripts\Items\Weapons\Weapon.cs" />
+    <Compile Include="Assets\Scripts\PlayerStuff\PlayerBehaviour.cs" />
+    <Compile Include="Assets\Scripts\PlayerStuff\PlayerStatistics.cs" />
+    <Compile Include="Assets\Scripts\Skills\Arc.cs" />
+    <Compile Include="Assets\Scripts\Skills\Fireball.cs" />
+    <Compile Include="Assets\Scripts\Skills\FireballBehaviour.cs" />
+    <Compile Include="Assets\Scripts\TestScripts\HomingProjectile.cs" />
+    <Compile Include="Assets\Scripts\TestScripts\LightningArc.cs" />
+    <Compile Include="Assets\Scripts\TestScripts\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\TestScripts\ReflectionTest.cs" />
+    <Compile Include="Assets\Scripts\TestScripts\Skills.cs" />
+    <Compile Include="Assets\Scripts\TestScripts\TestBoss.cs" />
     <Compile Include="Assets\Scripts\Tree.cs" />
-    <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Utility Classes\DamageRange.cs" />
+    <Compile Include="Assets\Scripts\Utility Classes\Pair.cs" />
+    <Compile Include="Assets\Scripts\Utility Classes\Skill.cs" />
     <Compile Include="Assets\Spawner.cs" />
   </ItemGroup>
   <ItemGroup>

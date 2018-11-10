@@ -1,0 +1,20 @@
+{
+  "Wizard": {
+    "Strength": 8,
+    "Dexterity": 6,
+    "Vitality": 11,
+    "Intelligence": 15
+  },
+  "Knight": {
+    "Strength": 12,
+    "Dexterity": 5,
+    "Vitality": 15,
+    "Intelligence": 8
+  },
+  "Barbarian": {
+    "Strength": 18,
+    "Dexterity": 5,
+    "Vitality": 12,
+    "Intelligence": 5
+  }
+}
