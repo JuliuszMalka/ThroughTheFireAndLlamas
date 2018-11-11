@@ -55,14 +55,13 @@
   <ItemGroup>
      <Compile Include="Assets\Movement.cs" />
      <Compile Include="Assets\Player.cs" />
+     <Compile Include="Assets\Scripts\_Scene_Manager.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\ForDebugging\Debugger.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Items\Armor\Armor.cs" />
      <Compile Include="Assets\Scripts\Items\Drop.cs" />
      <Compile Include="Assets\Scripts\Items\Gold.cs" />
-     <Compile Include="Assets\Scripts\Items\Inventory.cs" />
-     <Compile Include="Assets\Scripts\Items\InventorySlot.cs" />
      <Compile Include="Assets\Scripts\Items\Item.cs" />
      <Compile Include="Assets\Scripts\Items\ItemManager.cs" />
      <Compile Include="Assets\Scripts\Items\Weapons\Weapon.cs" />
@@ -77,10 +76,15 @@
      <Compile Include="Assets\Scripts\TestScripts\ReflectionTest.cs" />
      <Compile Include="Assets\Scripts\TestScripts\Skills.cs" />
      <Compile Include="Assets\Scripts\TestScripts\TestBoss.cs" />
+     <Compile Include="Assets\Scripts\Tree.cs" />
+     <Compile Include="Assets\Scripts\UI\ItemSlot.cs" />
+     <Compile Include="Assets\Scripts\UI\SkillSlot.cs" />
+     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
      <Compile Include="Assets\Scripts\Utility Classes\DamageRange.cs" />
      <Compile Include="Assets\Scripts\Utility Classes\Pair.cs" />
      <Compile Include="Assets\Scripts\Utility Classes\Skill.cs" />
      <Compile Include="Assets\Spawner.cs" />
+     <Compile Include="Assets\temp.cs" />
      <None Include="Assets\JsonDotNet\link.xml" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Maciek/Desktop/IPS/ThroughTheFireAndLlamas/ThroughTheFireAndLlamas/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

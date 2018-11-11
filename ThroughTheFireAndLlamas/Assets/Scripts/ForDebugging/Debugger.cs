@@ -17,4 +17,5 @@ public class Debugger {
 	public static void RandomDebugStatement(string message) {
 		Debug.Log(message);
 	}
+
 }

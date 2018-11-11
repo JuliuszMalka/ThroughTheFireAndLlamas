@@ -9,7 +9,7 @@ public class Fireball : Skill {
 	}	
 
 	public override void UseSkill(Pair<Vector3, Vector3> coords) {
-		Vector3 direction = coords.GetFirstValue() - coords.GetSecondValue();
+		Vector3 direction = coords.GetSecondValue() - coords.GetFirstValue();
 		GameObject fireballPrefab = Instantiate(
 			Resources.Load("fireball"),
 			coords.GetFirstValue(),

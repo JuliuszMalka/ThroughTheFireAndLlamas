@@ -50,7 +50,7 @@ public class Weapon : MonoBehaviour {
 
 
 	public void PickUp() {
-		Inventory.instance.AddToInventory(this.gameObject);
+		//Inventory.instance.AddToInventory(this.gameObject);
 		gameObject.SetActive(false);
 	}
 

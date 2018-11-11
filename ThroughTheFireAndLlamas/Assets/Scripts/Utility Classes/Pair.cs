@@ -7,12 +7,12 @@ public class Pair<T, U> {
 	private readonly T first;
 	private readonly U second;
 
-	Pair() {
+	public Pair() {
 		first = default(T);
 		second = default(U);
 	}
 
-	Pair(T first, U second) {
+	public Pair(T first, U second) {
 		this.first = first;
 		this.second = second;
 	}
@@ -23,6 +23,10 @@ public class Pair<T, U> {
 
 	public U GetSecondValue() {
 		return this.second;
+	}
+
+	public override string ToString() {
+		return this.first.ToString() + ", " + this.second.ToString();
 	}
 
 }

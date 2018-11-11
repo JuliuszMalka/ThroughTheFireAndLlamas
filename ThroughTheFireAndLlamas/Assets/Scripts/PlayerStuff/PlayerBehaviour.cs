@@ -7,6 +7,8 @@ public class PlayerBehaviour : MonoBehaviour {
 	public Vector3 lookDirection = new Vector3(0f, 0f, 0f);
 	public Vector3 moveDirection = new Vector3(0f, 0f, 0f);
 	private Rigidbody rbody = null;
+	public bool action = false;
+	public string skillID = "";
 	
 
 
@@ -41,6 +43,17 @@ public class PlayerBehaviour : MonoBehaviour {
 		} else {
 			PlayerStatistics.GetInstance().ToggleFlag("isHit", false);
 		} 
+
+		if (Input.GetMouseButtonDown(0)) {
+			if (!action) {
+				Attack();
+			} else {
+				//wywołaj delegatę ze słownika delegat
+				PlayerStatistics.GetInstance().allocatedSkills[skillID](new Pair<Vector3, Vector3>(this.transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition)));
+				action = false;
+				skillID = "";
+			}
+		}
 	}
 
 	void Attack() {
