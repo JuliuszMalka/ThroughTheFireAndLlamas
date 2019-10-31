@@ -1,2 +1,2 @@
 # ThroughTheFireAndLlamas
-Projekcik, szpagacik, wrotki, wól to jest projekt no i chuj
+Projekcik, szpagacik, wrotki, wól to jest projekt na studencki wór
